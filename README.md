@@ -1,2 +1,2 @@
 # Sheepsteroids
- The Unity game with MVP pattern
+The Asteroids clone Unity game with MVP pattern
