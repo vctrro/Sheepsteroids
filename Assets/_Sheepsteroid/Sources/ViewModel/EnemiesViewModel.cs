@@ -14,8 +14,8 @@ public class EnemiesViewModel
     private ViewModelSpawner<IEnemy, IEnemyView> _fragmentSpawner;
     private ViewModelSpawner<ISplittableEnemy, IEnemyView> _splittableSpawner;
     private IPlayer _player;
-    private Timer _timerActive;
-    private Timer _timerSplittable;
+    private GameTimer _timerActive;
+    private GameTimer _timerSplittable;
     private int _enemyFragments;
 
     private float RandomRotation => UnityEngine.Random.Range(0, 360);
@@ -49,10 +49,10 @@ public class EnemiesViewModel
 
     private void SpawnersInitialise()
     {
-        _timerActive = new Timer();
+        _timerActive = new GameTimer();
         _timerActive.Start(_gameSettings.ActiveEnemy.TimeToSpawn, true);
         _timerActive.OnTimerFinish += SpawnActiveEnemy;
-        _timerSplittable = new Timer();
+        _timerSplittable = new GameTimer();
         _timerSplittable.Start(_gameSettings.PassiveEnemy.TimeToSpawn, true);
         _timerSplittable.OnTimerFinish += SpawnSplittableEnemy;
     }

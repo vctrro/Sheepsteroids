@@ -7,7 +7,7 @@ using static UnityEngine.InputSystem.InputAction;
 public class InputController 
 {
     private GameSettings _gameSettings;
-    private PlayerInput _input;
+    private PInput _input;
 
     public event Action OnMove;
     public event Action OnShoot;
@@ -35,18 +35,18 @@ public class InputController
 
     private void Start()
     {
-        _input = new PlayerInput();
+        _input = new PInput();
         _input.Enable();
         _input.Main.Gun.performed += Shoot;
         _input.Main.LaserGun.performed += LaserShoot;
 
         _gameSettings.OnGameQuit += OnDestroy;
-        Timer.OnTimeChanged += PlayerMove;
+        GameTimer.OnTimeChanged += PlayerMove;
     }
 
     private void OnDestroy()
     {
-        Timer.OnTimeChanged -= PlayerMove;
+        GameTimer.OnTimeChanged -= PlayerMove;
         _gameSettings.OnGameQuit -= OnDestroy;
 
         _input.Disable();

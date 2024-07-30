@@ -12,7 +12,7 @@ public class PlayerViewModel
     private ViewModelPair<IPlayer, IPlayerView> _playerPair;
     private IPlayer _playerModel;
     private IPlayerView _playerView;
-    private PlayerSettings _playerSettings;
+    // private PlayerSettings _playerSettings;
 
     public ViewModelPair<IPlayer, IPlayerView> PlayerVM { get => _playerPair; }
 
@@ -45,13 +45,13 @@ public class PlayerViewModel
 
     public void Move()
     {
-        _playerModel.Speed = _playerSettings.Speed;
+        _playerModel.Speed = _gameSettings.Player.Speed;
         _playerModel.Move();
     }
 
     public void Rotate(float angle)
     {
-        _playerModel.Rotate(angle * _playerSettings.RotationSpeed);
+        _playerModel.Rotate(angle * _gameSettings.Player.RotationSpeed);
     }
 
     private void GameOver()

@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (_gameStopped) return;
-        Model.Timer.DeltaTime = Time.deltaTime;
+        Model.GameTimer.DeltaTime = Time.deltaTime;
     }
 
     private void GameInit()

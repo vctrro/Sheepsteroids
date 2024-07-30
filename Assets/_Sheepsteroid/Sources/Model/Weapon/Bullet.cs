@@ -7,11 +7,11 @@ namespace Model
     {
         public Action OnShoot { get; set; }
         public float LifeTime { get; set; }
-        private Timer _timer;
+        private GameTimer _timer;
 
         public Bullet()
         {
-            _timer = new Timer();
+            _timer = new GameTimer();
         }
 
         public void Fire()

@@ -9,12 +9,12 @@ namespace Model
         public float LifeTime { get; set; }
         internal bool IsShoot { get; private set; }
         private IPlayer _player;
-        private Timer _timer;
+        private GameTimer _timer;
 
         public Laser(IPlayer player)
         {
             _player = player;
-            _timer = new Timer();
+            _timer = new GameTimer();
         }
 
         public void Fire()

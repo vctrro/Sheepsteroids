@@ -52,7 +52,7 @@ public class GameStatistics : MonoBehaviour
         while (true)
         {
             _uiController.SetPlayerStats(
-                _player.Position, _player.Rotation, _playerRB2D.velocity.magnitude);
+                _player.Position, _player.Rotation, _playerRB2D.linearVelocity.magnitude);
 
             if (_weapon.LaserRollbackTime > 0)
                 _uiController.SetRollbackTime(_weapon.LaserRollbackTime);

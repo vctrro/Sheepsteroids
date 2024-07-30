@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Model
 {
-    public class Timer
+    public class GameTimer
     {
         #region Static
         private static float _deltaTime;

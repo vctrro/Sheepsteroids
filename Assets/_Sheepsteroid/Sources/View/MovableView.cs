@@ -21,7 +21,8 @@ public abstract class MovableView : Object2DView, IMovableView
 
     public void Move(float speed)
     {
-        _rigidbody2D.AddForce(_direction * speed);
+        var force = _direction * speed / (_rigidbody2D.angularVelocity + 1f);
+        _rigidbody2D.AddForce(force);
     }
 
     public void Teleport(Vector2 newPosition)

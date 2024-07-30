@@ -18,7 +18,7 @@ namespace Model
         public float RollbackTime => GetRollbackTime();
 
 
-        private Timer[] _timers;
+        private GameTimer[] _timers;
         private int _capacity;
         private float _rollbackTime;
 
@@ -26,10 +26,10 @@ namespace Model
         {
             Capacity = capacity;
             _rollbackTime = rollbackTime;
-            _timers = new Timer[capacity];
+            _timers = new GameTimer[capacity];
             for (int i = 0; i < _timers.Length; i++)
             {
-                _timers[i] = new Timer();
+                _timers[i] = new GameTimer();
             }
         }
 
