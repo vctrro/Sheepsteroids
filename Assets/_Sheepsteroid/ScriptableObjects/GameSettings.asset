@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player:
     spawnPosition: {x: 0, y: 0}
-    speed: 1
+    speed: 0.9
     rotationSpeed: 1
   _weapon:
-    _bulletSpeed: 120
-    _bulletLifeTime: 0.5
+    _bulletSpeed: 50
+    _bulletLifeTime: 1
     _laserLifeTime: 0.3
     _laserGunCapacity: 3
     _laserGunRollbackTime: 6
@@ -29,7 +29,7 @@ MonoBehaviour:
     _points: 15
   _passiveEnemy:
     _timeToSpawn: 5
-    _speed: 0.3
+    _speed: 0.5
     _maxQuantity: 5
     _points: 10
     _fragmentPoints: 5

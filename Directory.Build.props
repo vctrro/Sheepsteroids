@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <!-- Suppress Unity-specific false positives -->
+    <!-- IDE0051: Remove unused private members (Unity messages like Start, Update) -->
+    <!-- IDE0044: Add readonly modifier (serialized fields) -->
+
+    <!-- Auto-generated: Point MSBuild to Unity's bundled reference assemblies
+         so DotRush can compile without Mono or .NET Framework SDK -->
+    <FrameworkPathOverride>/Applications/Unity/Hub/Editor/6000.4.0f1/Unity.app/Contents/Resources/Scripting/UnityReferenceAssemblies/unity-4.8-api</FrameworkPathOverride>
+  </PropertyGroup>
+</Project>
